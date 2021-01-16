@@ -1,1 +1,1 @@
-web: gunicorn myportfolio.wsgi --workers 3
+web: gunicorn myportfolio.myportfolio.wsgi --workers 3
