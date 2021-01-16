@@ -1,1 +1,1 @@
-web: gunicorn myportfolio.wsgi --workers 3 --chdir=/myportfolio/myportfolio
+web: gunicorn myportfolio.wsgi --workers 3 --chdir=/myportfolio
