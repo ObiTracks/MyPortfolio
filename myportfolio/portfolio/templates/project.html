@@ -1,0 +1,129 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="/static/css/gallery.css">
+<link rel="stylesheet" href="{% static 'css/carousel.css'%}">
+{% endblock %}
+{% block content %}
+<div class="section" id="section-intro" style="min-height: 10vh; height: 50vh; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+    <h1 style="text-align: center; color: white;">{{project.name}}</h1>
+    <h2 style="text-align: center; color: rgb(221, 221, 221); font-size: 20px;">{{project.desc_short}}</h2>
+</div>
+
+<div class="section" id="section-project">
+        <div class="carousel">
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
+                <!-- Full-width images with number and caption text -->
+                {% for image in images %}
+                <div class="mySlides fade" style="width: 100%; height: 500px;">
+                    <div class="numbertext">{{forloop.counter}}/{{images.count}}</div>
+                    <img src="{{image.image.url}}" style="width:100%;">
+                </div>
+                {% endfor %}
+        
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+                <!-- The dots/circles -->
+                <div class="dots" style="text-align:center">
+                    {% for image in images %}
+                    <span class="dot" onclick="currentSlide({{ forloop.counter}})"></span>
+                    {% endfor %}
+                </div>
+            </div>
+            <br>
+        </div>
+
+        <div class="project-info">
+            <div class="text">
+                <div class="title main-header">
+                    <hr class="solid"><hr>
+                    <hr class="solid"><hr>
+                    <hr class="solid"><hr><hr class="solid">
+                    
+                    <h2 id="title-details" style="font-size: 30px;">Description</h2>
+                </div>
+                <p style="min-height: 30vh; text-align: left;">{{project.desc}}</p>
+                {%if project.desc_design %}
+                <div class="title main-header">
+                    <hr class="solid"><hr>
+                    <hr class="solid"><hr>
+                    <hr class="solid"><hr><hr class="solid">
+                    
+                    <h2 id="title-details" style="font-size: 30px;">Description</h2>
+                </div>
+                <p style="min-height: 30vh;  text-align: left;">{{project.desc_design}}</p>
+                {% endif %}
+            </div>
+            <div class="detail-panel">
+                <div class="title design-header">
+                    <hr class="solid"><hr>
+                    <hr class="solid"><hr>
+                    <hr class="solid"><hr>
+                    <hr class="solid">
+                    <h2 id="title-details" style="font-size: 45px;">Details</h2>
+                </div>
+                <div class="details">
+                    {% if project.client %}
+                        <p>Client | {{project.client}} </p>
+                    {% endif %}
+                    {% if project.date %}
+                        <p>Created | {{project.date}} </p>
+                    {% endif %}
+                    {% if project.basedin %}
+                        <p>Purpose | {{project.client}} </p>
+                    {% endif %}
+                    {% if project.website %}
+                        <p><a href="{{project.website}}" style="color: blue;">Website/Demo</a></p>
+                    {% endif %}
+                    {% if project.github %}
+                        <p><a href="{{project.github}}" style="color: blue;">Github Code</a></p>
+                    {% endif %}
+
+                </div>
+            </div>
+        </div>
+</div>
+
+<!-- <div class="section">
+    <h1>Design Process</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque mattis lectus vel vehicula cursus. Ut venenatis sapien
+    id est suscipit ornare. Ut pharetra, sem quis posuere volutpat, libero justo facilisis turpis, at ullamcorper augue
+    augue vel magna. Sed scelerisque, mi a condimentum blandit, felis justo tempor justo, quis eleifend eros ligula sit amet
+    massa.</p>
+</div> -->
+
+<script>
+    var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+{% endblock %}

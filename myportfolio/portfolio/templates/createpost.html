@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<form action="" method="POST" enctype="multipart/form-data" style="display: flex; flex-direction: column; width: 500px; height: 600px; ">
+    {% csrf_token %}
+    
+    <!-- <input type="text" name="name" placeholder="Project name">
+    <textarea name="desc" id="" cols="5" rows="4" placeholder="The main description"></textarea>
+    <textarea name="desc_short" id="" cols="5" rows="4" placeholder="The short form description"></textarea>
+    <textarea name="desc_design" id="" cols="5" rows="4" placeholder="The design description"></textarea>
+
+    <br><br>
+
+    <input type="text" name="client" placeholder="client">
+    <input type="text" name="date" placeholder="date">
+    <input type="text" name="basedin" placeholder="based in">
+    <input type="text" name="website" placeholder="website">
+    <input type="text" name="github" placeholder="github"> -->
+
+    <table>
+        {{form}}
+    </table>
+
+    <br><br>
+    <input type="file" name="file[]">
+    <br>
+    <div class="images" id="images"></div>
+    <input type="button" name="add_image" id="add_image" value="Add Image">
+    
+    <!-- Tags go here -->
+
+    <input type="submit" value="Save Data">
+</form>
+
+
+<script>
+    document.getElementById("add_image").onclick = function(ev){
+        var image = document.getElementById("images");
+
+        var newInput = document.createElement("input");
+        newInput.type = "file";
+        newInput.name = "file[]";
+
+        var br = document.createElement("br");
+        var br2 = document.createElement("br");
+
+        image.appendChild(newInput);
+        image.appendChild(br);
+        image.appendChild(br2);
+
+    }
+</script>
+{% endblock %}

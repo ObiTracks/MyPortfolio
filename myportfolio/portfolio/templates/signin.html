@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login to Bloom</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/signin.css' %}">
+</head>
+
+<body>
+    <form method="post" class="box">
+        {% csrf_token %}
+        <h1>Sign In</h1>
+        <input type="text" name="username" placeholder="Username">
+        <input type="password" name="password" placeholder="Password">
+        <input type="submit" value="Login">
+        {% for message in messages %}
+        <p id="messages" style="color: white;">{{message}}</p>
+        {% endfor %}
+    </form>
+</body>
+
+</html>

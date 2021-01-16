@@ -1,0 +1,271 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  top: 0;
+  margin: 0;
+  padding: 0;
+}
+
+body .bg-blue {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 28vw;
+  height: 100%;
+  background: #0D1CF2;
+  z-index: -1;
+}
+
+h1 {
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+  font-weight: medium;
+  margin: 0 0 1rem 0;
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  font-weight: 300;
+  margin: 0 0 10px 0;
+}
+
+h2.project-name {
+  font-weight: medium;
+}
+
+h2.fancy {
+  background: -webkit-gradient(linear, left top, right bottom, from(#36D1DC), to(#004FFF));
+  background: linear-gradient(to bottom right, #36D1DC, #004FFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+p {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.2vw;
+  font-weight: 300;
+  line-height: 25px;
+  color: #a9a9a9;
+  margin: 2rem 0;
+}
+
+span p {
+  font-family: "Lato", sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+}
+
+button {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 4px 10px;
+  font-family: "Raleway", sans-serif;
+  font-size: 13px;
+  background: -webkit-gradient(linear, left top, right bottom, from(#36D1DC), to(#0051ffbb));
+  background: linear-gradient(to bottom right, #36D1DC, #0051ffbb);
+  background: -webkit-gradient(linear, left top, right top, from(#fd1d1d), to(#fcb045));
+  background: linear-gradient(to right, #fd1d1d, #fcb045);
+  color: white;
+  color: black;
+  outline: none;
+  border: none;
+  border-radius: 20rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 5px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+button:hover {
+  cursor: pointer;
+  -webkit-box-shadow: #4b4b4b 0px 0px 7px;
+          box-shadow: #4b4b4b 0px 0px 7px;
+}
+
+button#icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.navbar {
+  width: 100%;
+  height: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 2rem;
+}
+
+.navbar div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 0;
+}
+
+.navbar div.links a {
+  color: black;
+  text-decoration: none;
+  margin-left: 20px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+.navbar div.logo a {
+  margin: 0;
+  color: black;
+  font-size: 1.5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.navbar div:nth-child(1) {
+  font-size: 20px;
+  padding-left: 3rem;
+}
+
+.navbar div:nth-child(2) {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navbar div:nth-child(3) {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-right: 3rem;
+}
+
+.links {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: 100vh;
+}
+
+.section {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 2rem 15vw;
+}
+
+.section .col {
+  min-width: 300px;
+}
+
+.section .col.col-1 {
+  width: 65%;
+  padding-top: 4vw;
+}
+
+.section .col.col-1 p {
+  width: 80%;
+}
+
+.section .col.col-2 {
+  width: 35%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: unset;
+  -webkit-box-direction: unset;
+      -ms-flex-direction: unset;
+          flex-direction: unset;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section .col.col-2 img {
+  height: 60vh;
+  -webkit-box-shadow: #131866 1rem 1rem 10rem;
+          box-shadow: #131866 1rem 1rem 10rem;
+}
+
+#section-intro {
+  background-color: #000000;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='863' height='103.6' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%2307009f' stroke-width='10' stroke-opacity='0.58'%3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+#section-project {
+  background: -webkit-gradient(linear, left top, right top, from(whitesmoke), to(#dbf0ff));
+  background: linear-gradient(to right, whitesmoke, #dbf0ff);
+}
+
+label {
+  font-family: "Montserrat", sans-serif;
+}
+/*# sourceMappingURL=base.css.map */

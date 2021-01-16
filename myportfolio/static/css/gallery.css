@@ -1,0 +1,125 @@
+#section-project {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+}
+
+.project-info {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2rem 0;
+}
+
+.project-info .text {
+  width: 55%;
+  min-width: 300px;
+  padding: 3.5rem 0;
+  position: relative;
+}
+
+.project-info .text .main-header p {
+  width: 100%;
+  border: solid black 2px;
+  text-align: left;
+  margin-bottom: 20rem;
+}
+
+.project-info .detail-panel {
+  background: -webkit-gradient(linear, left top, right bottom, from(#d03000), color-stop(#ff8400), to(#ffee00));
+  background: linear-gradient(to bottom right, #d03000, #ff8400, #ffee00);
+  width: 35%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-width: 400px;
+  position: relative;
+  padding: 5%;
+}
+
+.project-info .detail-panel .details {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 1rem;
+  position: relative;
+}
+
+.project-info .detail-panel .details p {
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  width: 80%;
+  text-align: center;
+  padding: 12px 0;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  color: white;
+  border-bottom: white 1px solid;
+}
+
+.project-info .title {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+  text-align: center;
+}
+
+.project-info .title.main-header h2 {
+  font-weight: 600;
+  color: black;
+}
+
+.project-info .title.main-header hr.solid {
+  height: 3px;
+  background: #d6d6d6;
+}
+
+.project-info .title hr {
+  height: 3.4px;
+  width: 100%;
+  margin: 0;
+  outline: none;
+  border: none;
+}
+
+.project-info .title hr.solid {
+  background: #C53B00;
+}
+
+.project-info .title h2 {
+  width: 100%;
+  word-break: keep-all;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  color: white;
+}
+/*# sourceMappingURL=gallery.css.map */

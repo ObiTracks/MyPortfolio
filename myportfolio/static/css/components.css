@@ -1,0 +1,97 @@
+.card {
+  position: relative;
+  width: 20vw;
+  min-width: 300px;
+  height: 25rem;
+  margin: 10px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  justify-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+.card * {
+  -webkit-transition: ease 0.5s;
+  transition: ease 0.5s;
+}
+
+.card div .bg-img {
+  height: 100%;
+  width: auto;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.card div h1 {
+  margin: 0;
+  position: absolute;
+  width: 100%;
+  bottom: 2rem;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 2px;
+  word-break: break-all;
+}
+
+.card div .icon {
+  opacity: 0;
+}
+
+.card:hover {
+  border-radius: 4px;
+}
+
+.card:hover .bg-img {
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
+}
+
+.card:hover h1 {
+  opacity: 0;
+}
+
+.card:hover .icon {
+  opacity: 1;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.card:hover .rollover-div {
+  opacity: 1;
+}
+
+.tags {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tags .tag {
+  margin: 3px;
+  padding: 8px 12px;
+  color: #0ba3c9;
+  font-size: 0.9rem;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  border-radius: 2rem;
+  border: solid 2px #0ba3c9;
+}
+/*# sourceMappingURL=components.css.map */

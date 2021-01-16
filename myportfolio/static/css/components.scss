@@ -1,0 +1,93 @@
+// VARIABLES
+$color-primary1: #48e2f3;
+$color-primary2: #0D1CF2;
+$color-secondary1: #ffd900;
+$color-secondary2: #F90651;
+$color-neutral1: #151516;
+$color-neutral2: #505159;
+$color-neutral3: #8d8d8f;
+$font1: 'Montserrat', sans-serif;
+$font2: 'Poppins', sans-serif;
+$size-title: 48px;
+$size-subtitle: 16px;
+$size-accent: 14px;
+
+
+.card {
+  *{
+    transition: ease 0.5s;
+  }
+  position: relative;
+  width: 20vw;
+  min-width: 300px;
+  height: 25rem;
+  margin: 10px 10px;
+  display: flex;
+  justify-content: flex-start;
+  justify-items: flex-start;
+  align-items: center;
+  overflow: hidden;
+  div{
+    
+    .bg-img{
+      height: 100%;
+      width: auto;
+      transform: scale(1.2);
+    }
+    h1{
+      margin: 0;
+      position: absolute;
+      width: 100%;
+      bottom: 2rem;
+      text-align: center;
+      font-family: $font2;
+      font-weight: 500;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      color: white;
+      // color: $color-primary1;
+      letter-spacing: 2px;
+      word-break: break-all;
+    }
+    .icon{
+      opacity: 0;
+    }
+  }
+}
+.card:hover{
+  // border: solid black 1rem;
+  border-radius: 4px;
+}
+.card:hover .bg-img{
+  filter: blur(3px);
+}
+.card:hover h1{
+  opacity: 0;
+}
+.card:hover .icon{
+  opacity: 1;
+  transform: scale(0.8);
+}
+.card:hover .rollover-div{
+  opacity: 1;
+}
+
+.tags{
+  width: 100%;
+  // padding: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  // border: solid 1px black;
+  .tag{
+    // width: fit-content;
+    margin: 3px;
+    padding: 8px 12px;
+    color: rgb(11, 163, 201);
+    font-size: 0.9rem;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    border-radius: 2rem;
+    border: solid 2px rgb(11, 163, 201);
+  }
+}

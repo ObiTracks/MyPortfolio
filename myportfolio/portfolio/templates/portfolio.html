@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="section" style="">
+    <h1 style="width: 100%; margin: 2rem 0  3rem 0; text-align: center;">
+        Recent
+    </h1>
+    {% for project in recent %}
+        {% include "card.html" %}
+    {% endfor %}
+
+    <h1 style="width: 100%; margin: 6rem 0  3rem 0; text-align: center;">
+        Technologies
+    </h1>
+    {% for tag in popular_tags %}
+        <div style="width: 100%; display: flex; justify-content: center;">
+            <h2 style="font-size: 1.6rem; font-weight: 400; margin-bottom: 20px; text-align: center; font-size: 1.7rem; color: blue;">{{tag}}</h2>
+        </div>
+        {% for project in tag.project_set.all %}
+            {% include "card.html" %}
+        {% endfor %}
+    {% endfor %}
+    
+    <h1 style="width: 100%; margin: 6rem 0  3rem 0; text-align: center;">
+        All
+    </h1>
+    {% for project in projects %}
+        {% include "card.html" %}
+    {% endfor %}
+    
+
+
+</div>
+{% endblock %}

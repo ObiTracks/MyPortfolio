@@ -1,0 +1,9 @@
+{% load static %}
+<div class="links">
+    <a href="{{intro_content.btn1link}}"><button id="icon"><img style="width: 100%;" src="{% static 'images/linkedin-w.png' %}" alt=""></button></a>
+    <a href="{{intro_content.btn2link}}"><button id="icon"><img style="width: 100%;" src="{% static 'images/github-w.png' %}" alt=""></button></a>
+    {% if intro_content.btn3link %}
+    <a href="{{intro_content.btn3link}}"><button id="icon"><img style="width: 100%;" src="{% static 'images/instagram-w.png' %}" alt=""></button></a>
+    {% endif %}
+    <a href="mailto:{{intro_content.email}}"><button style="color: white;">moshe.obi.ihej@gmail.com</button></a>
+</div>
